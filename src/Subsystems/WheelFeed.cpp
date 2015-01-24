@@ -38,11 +38,11 @@ void WheelFeed::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void WheelFeed::OpenFeeder() {
-	windowMotor->Set(Relay::kForward);
+	windowMotor->Set(Relay::kReverse);
 }
 
 void WheelFeed::CloseFeeder(){
-	windowMotor->Set(Relay::kReverse);
+	windowMotor->Set(Relay::kForward);
 }
 
 void WheelFeed::StopFeeder() {
@@ -56,7 +56,7 @@ void WheelFeed::PullIn() {
 
 void WheelFeed::PushOut() {
 	rightWheel->Set(-1);
-	leftWheel->Set(-1);
+	leftWheel->Set(1);
 }
 
 void WheelFeed::StopWheels() {
