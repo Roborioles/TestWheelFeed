@@ -1,0 +1,6 @@
+bin/
+Binaries/
+.metadata
+*~
+target/
+*.o
